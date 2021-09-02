@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Splined — Coming Soon Page Template</title>
+	<!-- Modernizr -->
+	<script src="js/modernizr.js"></script>
+	<!-- Main styles file -->
+	<link rel="stylesheet" href="css/styles.css" />
+	<!-- Icons via Font Awesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+</head>
+<body class="color-scheme-berry" dir="rtl">
+	<!-- Animated background -->
+	<canvas id="bg-canvas"></canvas>
+	
+	<!-- First screen -->
+	<div class="splash">
+		<div class="centered-unit">
+			<div class="container">
+				<!-- Main header -->
+				<h1>سایت تن پوش گلشید!</h1>
+				<!-- Sub header -->
+				<p class="lead">در تلاشیم تا سایتی درخور شما طراحی کنیم.</p>
+				
+				<!-- Countdown -->
+				<div class="countdown large">
+					<!-- Days -->
+					<div class="time days">
+						<div class="value">00</div>
+						<div class="unit">روز</div>
+					</div>
+					<!-- Hours -->
+					<div class="time hours">
+						<div class="value">00</div>
+						<div class="unit">ساعت</div>
+					</div>
+					<!-- Minutes -->
+					<div class="time minutes">
+						<div class="value">00</div>
+						<div class="unit">دقیقه</div>
+					</div>
+					<!-- Seconds -->
+					<div class="time seconds">
+						<div class="value">00</div>
+						<div class="unit">ثانیه</div>
+					</div>
+				</div>
+				<!-- Countdown end -->
+			</div>	
+		</div>
+	</div>
+	
+	<!-- Second screen -->
+	<div class="overlap">
+	
+		<!-- Link "Scroll down to learn more" -->
+		<a href="" class="more">پایین بروید<i class="fa fa-chevron-down"></i> تا بیشتر متوجه شوید</a>
+		
+		<!-- Detailed info -->
+		<div class="container few-words">
+			<div class="row">
+				<!-- First column -->
+				<div class="col col-heading">
+					<!-- Detailed info -->
+					<h2>تن‌پوش گلشید تولید کننده انواع لباس!</h2>
+					
+					<!-- Social icons -->
+					<div class="social">
+						<a href="" class="social-icon">
+							<i class="fa fa-twitter fa-lg"></i>
+						</a>
+						<a href="" class="social-icon">
+							<i class="fa fa-facebook fa-lg"></i>
+						</a>
+						<a href="" class="social-icon">
+							<i class="fa fa-google-plus fa-lg"></i>
+						</a>
+						<a href="" class="social-icon">
+							<i class="fa fa-instagram fa-lg"></i>
+						</a>
+					</div>
+					<!-- Social icons block end -->
+				</div>
+				<!-- First column end -->
+				
+				<!-- Second column -->
+				<div class="col col-content">
+					<p>در تلاشیم.</p>
+				</div>
+				<!-- Second column end -->
+				
+				<!-- Third column -->
+				<div class="col col-contacts">
+					<h3>تماس با ما</h3>
+					<div class="contact">
+						<span class="icon"><i class="fa fa-phone fa-fw"></i></span>
+						<span class="value" style="
+						direction: ltr;
+						text-align: right;
+					">+۹۸ ۹۳۵ ۵۰۱ ۶۳۱۲</span>
+					</div>
+					<!-- <div class="contact">
+						<span class="icon"><i class="fa fa-envelope-o fa-fw"></i></span>
+						<span class="value"><a href="mailto: info@company.com">info@company.com</a></span>
+					</div> -->
+					<div class="contact">
+						<span class="icon"><i class="fa fa-map-marker fa-fw"></i></span>
+						<span class="value">ایران<br/>تهران<br/>خیابان انقلاب</span>
+					</div>
+				</div>
+				<!-- Third column end -->
+			</div>
+		</div>
+		<!-- Detailed info block end -->
+		
+		<!-- Send me an email when it's done -->
+		<!-- <div class="notify-by-email">
+			<div class="container">	
+				<div class="row">
+					<div class="col col-one-third">
+						<h3>Send me an email when&nbsp;it's done!</h3>
+					</div>
+					<div class="col col-two-thirds">
+						Subscribe form
+						<form action="notify-me.php" id="notifyMe" method="POST">
+							<input type="text" name="email" placeholder="Your e-mail address"/>
+							<button>Send</button>
+							<p class="note">We promise not to spam... No seriously, we won't!</p>
+						</form>
+						Subscribe form end
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- Send me an email when it's done block end	 -->
+
+
+		<!-- Footer -->
+		<div class="footer">
+			<div class="container">
+				&copy;تمامی حقوق محفوظ است. ۱۴۰۰ - ۲۰۲۱
+			</div>
+		</div>
+		<!-- Footer end -->
+	</div>
+	
+	<!-- Javascripts -->
+	<script src="js/jquery.js"></script>
+	<script src="js/countdown.js"></script>
+	<script src="js/bezierCanvas.js"></script>
+	<script src="js/notifyMe.js"></script>
+	
+	<script type="text/javascript">
+	$().ready(function(){
+	
+		// Activate countdownTimer plugin on a '.countdown' element
+		$(".countdown").countdownTimer({
+			// Set the end date for the countdown
+			endTime: new Date("December 21, 2021 11:13:00 UTC+0330")
+		});
+		
+		
+		// Activate notifyMe plugin on a '#notifyMe' element	
+		$("#notifyMe").notifyMe();
+		
+		
+		// Activate bezierCanvas plugin on a #bg-canvas element
+		$("#bg-canvas").bezierCanvas({
+			maxStyles: 1,
+			maxLines: 100,
+			lineSpacing: 1,
+			colorBase: {r: 255,g: 255,b: 255},
+			colorVariation: {r: 0, g: 0, b: 0},
+			moveCenterX: 0,
+			moveCenterY: 0,
+			delayVariation: 1,
+			speedLinear: false,
+			globalAlpha: 0.2,
+			globalSpeed: 500,
+		});
+		
+		// Add handler on 'Scroll down to learn more' link
+		$().ready(function(){
+			$(".overlap .more").click(function(e){
+				e.preventDefault();
+				$("body,html").animate({scrollTop: $(window).height()});
+			});
+		});		
+
+		
+	});
+	</script>
+
+</body>
+</html>
